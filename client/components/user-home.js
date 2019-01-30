@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {Animated} from "react-animated-css";
 
 /**
  * COMPONENT
  */
 export const UserHome = props => {
-  const firstName = props.user.firstName
+const firstName = props.user.firstName
   if (firstName) {
     return (
       <div>

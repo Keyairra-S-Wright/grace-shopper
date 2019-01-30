@@ -29,7 +29,6 @@ const styles = theme => ({
   }
 })
 
-//const userId = 1
 
 class Cart extends Component {
   constructor() {
@@ -52,7 +51,7 @@ class Cart extends Component {
   handleSubmit() {
     if (this.props.userId) {
       const reqObj = {id: this.props.orderId, userId: this.props.userId}
-      alert('Your Order Has Been Placed')
+      alert('Your Order Has Been Placed');
       this.props.checkout(reqObj)
       this.props.history.push('/product')
     } else {
@@ -87,7 +86,6 @@ class Cart extends Component {
                   </ListItem>
                 )
               })}
-              {/* <h2>Total Price: ${fakeItemsPrices.reduce(findTotalPrices,0).toFixed(2)}</h2> */}
             </List>
             <Button onClick={() => this.handleSubmit()}>Checkout </Button>
           </div>
