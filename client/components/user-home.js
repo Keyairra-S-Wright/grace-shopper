@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import {Animated} from "react-animated-css";
 
 /**
  * COMPONENT
  */
 export const UserHome = props => {
-const firstName = props.user.firstName
+  console.log('here are the props in userhome', props)
+const firstName = props.user.email
   if (firstName) {
     return (
       <div>
-        <h3>Welcome, {firstName}</h3>
+        <h3>Welcome, {firstName}!</h3>
       </div>
     )
   } else {

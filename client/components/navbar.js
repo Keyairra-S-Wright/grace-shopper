@@ -16,7 +16,6 @@ import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 
 const styles = theme => ({
@@ -92,7 +91,6 @@ class Navbar extends React.Component {
     this.handleClick = this.handleClick.bind(this)
     this.handleClick2 = this.handleClick2.bind(this)
     this.handleChange = this.handleChange.bind(this)
-    this.handleClose = this.handleClose.bind(this)
   }
 
   componentDidMount() {
@@ -107,10 +105,6 @@ class Navbar extends React.Component {
     this.setState({anchorEl2: evt.currentTarget})
   }
 
-  handleClose = () => {
-    this.setState({anchorEl: null})
-  }
-
   handleClose2 = () => {
     this.setState({anchorEl2: null})
   }
@@ -123,14 +117,11 @@ class Navbar extends React.Component {
 
   render() {
     const classes = this.props.classes
-    const {anchorEl, anchorEl2} = this.state
+    const {anchorEl2} = this.state
     const categories = this.props.categories
     const userId = this.props.user.id
     return (
       <div>
-        <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-          <a href="/home"><img src="images/logo_banner.png" height="300px" width="100%" padding-top="0px"/></a>
-        </Animated>
         <div className={classes.root}>
             <AppBar position="static">
               <Toolbar>
@@ -139,15 +130,8 @@ class Navbar extends React.Component {
                       <div>
                       <Button  href="/home" color="secondary">Home</Button>
                       <Button onClick={this.props.handleClick} color="secondary">Logout</Button>
-                      </div>
-                  ) : (
-                    <div>
-                      {/* The navbar will show these links before you log in */}
-                        <Button href ="/login" color="secondary">Login</Button>
-                        <Button href="signup" color="secondary">Sign Up</Button>  
-                    </div>
-                  )}
-                  <Button href="/product">Products</Button>{' '}
+                      <Button href ={`/users/profile/${userId}`}>Profile</Button>
+                      <Button href="/product">Products</Button>{' '}
                   <Button aria-owns={anchorEl2 ? 'simple-menu' : null} aria-haspopup="true" onClick={this.handleClick2}>
                     Categories 
                   </Button>
@@ -165,6 +149,31 @@ class Navbar extends React.Component {
                       )
                     })}
                   </Menu>
+                      </div>
+                  ) : (
+                    <div>
+                        <Button href ="/login" color="secondary">Login</Button>
+                        <Button href="signup" color="secondary">Sign Up</Button>
+                        <Button href="/product">Products</Button>{' '}
+                        <Button aria-owns={anchorEl2 ? 'simple-menu' : null} aria-haspopup="true" onClick={this.handleClick2}>
+                          Categories 
+                        </Button>
+                        <Menu id="simple-menu" anchorEl={anchorEl2} open={Boolean(anchorEl2)} onClose={this.handleClose2}>
+                          {categories.map(category => {
+                            return (
+                              <NavLink
+                                key={category.id}
+                                to={`/product/category/${category.title}`}
+                              >
+                                <MenuItem onClick={this.handleClose2}>
+                                  {category.title}
+                                </MenuItem>
+                              </NavLink>
+                            )
+                    })}
+                  </Menu>  
+                    </div>
+                  )}
                 </Typography>
                 <div className={classes.grow} />
                   <div className={classes.search}>
@@ -183,7 +192,7 @@ class Navbar extends React.Component {
                       value={this.state.search}
                     />
                   </div>
-                    <Button href={{pathname: '/search', state: {searchTerm: this.state.search}}} type="submit" onClick={() => this.setState(defaultState)}> Go </Button>
+                    <Button href={{pathname: '/search', state: {searchTerm: this.state.search}}} type="submit" onClick={() => this.setState(defaultState)}>Go</Button>
                 <NavLink to="/cart">
                   <IconButton>
                     <ShoppingCartIcon />
@@ -192,6 +201,9 @@ class Navbar extends React.Component {
               </Toolbar>
             </AppBar>
           </div>
+          <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+          <a href="/home"><img src="images/logo_banner.png" height="300px" width="100%" padding-top="0px"/></a>
+        </Animated>
       </div>
     )
   }
@@ -237,15 +249,4 @@ aria-haspopup="true"
 onClick={this.handleClick}
 >
 <h2>{this.props.user.firstName}</h2>
-</Button>
-<Menu
-id="simple-menu"
-anchorEl={anchorEl}
-open={Boolean(anchorEl)}
-onClose={this.handleClose}
->
-<NavLink to={`/users/profile/${userId}`}>
-  <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-</NavLink>
-<MenuItem onClick={this.handleClose}>My Orders</MenuItem>
-</Menu> */}
+</Button> */}
