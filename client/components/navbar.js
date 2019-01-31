@@ -128,70 +128,26 @@ class Navbar extends React.Component {
     const userId = this.props.user.id
     return (
       <div>
-        <nav>
-          {this.props.isLoggedIn ? (
-            <div>
-              {/* The navbar will show these links after you log in */}
-              <NavLink to="/home">
-                <Button color="secondary">
-                  <h2>Home</h2>
-                </Button>
-              </NavLink>
-              <Button onClick={this.props.handleClick} color="secondary">
-                <h2>Logout</h2>
-              </Button>
-
-              <Button
-                props="user"
-                color="primary"
-                aria-owns={anchorEl ? 'simple-menu' : null}
-                aria-haspopup="true"
-                onClick={this.handleClick}
-              >
-                <h2>{this.props.user.firstName}</h2>
-              </Button>
-              <Menu
-                id="simple-menu"
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
-                onClose={this.handleClose}
-              >
-                <NavLink to={`/users/profile/${userId}`}>
-                  <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                </NavLink>
-                <MenuItem onClick={this.handleClose}>My Orders</MenuItem>
-              </Menu>
-            </div>
-          ) : (
-            <div>
-              {/* The navbar will show these links before you log in */}
-              <NavLink to="/login">
-                <Button color="secondary">
-                  <h2>Login</h2>
-                </Button>
-              </NavLink>
-              <NavLink to="/signup">
-                <Button color="secondary">
-                  <h2>Sign Up</h2>
-                </Button>
-              </NavLink>
-            </div>
-          )}
-        </nav> 
-        
         <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
           <a href="/home"><img src="images/logo_banner.png" height="300px" width="100%" padding-top="0px"/></a>
         </Animated>
         <div className={classes.root}>
             <AppBar position="static">
               <Toolbar>
-                <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-                  <MenuIcon />
-                </IconButton>
                 <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-                  <NavLink to="/product">
-                    <Button>Products</Button>{' '}
-                  </NavLink>
+                  {this.props.isLoggedIn ? (
+                      <div>
+                      <Button  href="/home" color="secondary">Home</Button>
+                      <Button onClick={this.props.handleClick} color="secondary">Logout</Button>
+                      </div>
+                  ) : (
+                    <div>
+                      {/* The navbar will show these links before you log in */}
+                        <Button href ="/login" color="secondary">Login</Button>
+                        <Button href="signup" color="secondary">Sign Up</Button>  
+                    </div>
+                  )}
+                  <Button href="/product">Products</Button>{' '}
                   <Button aria-owns={anchorEl2 ? 'simple-menu' : null} aria-haspopup="true" onClick={this.handleClick2}>
                     Categories 
                   </Button>
@@ -227,9 +183,7 @@ class Navbar extends React.Component {
                       value={this.state.search}
                     />
                   </div>
-                <NavLink to={{pathname: '/search', state: {searchTerm: this.state.search}}}>
-                    <Button type="submit" onClick={() => this.setState(defaultState)}> Submit</Button>
-                </NavLink>
+                    <Button href={{pathname: '/search', state: {searchTerm: this.state.search}}} type="submit" onClick={() => this.setState(defaultState)}> Go </Button>
                 <NavLink to="/cart">
                   <IconButton>
                     <ShoppingCartIcon />
@@ -273,3 +227,25 @@ Navbar.propTypes = {
 }
 
 export default connect(mapState, mapDispatch)(withStyles(styles)(Navbar));
+
+
+{/* <Button
+props="user"
+color="primary"
+aria-owns={anchorEl ? 'simple-menu' : null}
+aria-haspopup="true"
+onClick={this.handleClick}
+>
+<h2>{this.props.user.firstName}</h2>
+</Button>
+<Menu
+id="simple-menu"
+anchorEl={anchorEl}
+open={Boolean(anchorEl)}
+onClose={this.handleClose}
+>
+<NavLink to={`/users/profile/${userId}`}>
+  <MenuItem onClick={this.handleClose}>Profile</MenuItem>
+</NavLink>
+<MenuItem onClick={this.handleClose}>My Orders</MenuItem>
+</Menu> */}
