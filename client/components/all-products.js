@@ -5,7 +5,6 @@ import {withRouter, Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import DisplayManyProducts from './display-many-products'
 
-
 class AllProducts extends React.Component {
   componentDidMount() {
     this.props.fetchAllProducts()

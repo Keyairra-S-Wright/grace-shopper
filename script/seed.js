@@ -12,39 +12,18 @@ const {
 
 const users = [
   {
-    firstName: 'Jordan',
-    lastName: 'Davis',
-    email: 'jdavis@email.com',
-    password: 'jordanCodes8910',
-    adminStatus: true
-  },
-  {
-    firstName: 'Almendra',
-    lastName: 'Estrada',
-    email: 'AEstrada@email.com',
-    password: 'irockmysocks1224',
-    adminStatus: false
-  },
-  {
     firstName: 'Keyairra',
     lastName: 'Wright',
     email: 'kwright@email.com',
-    password: 'keyairrakeyairraaaa',
+    password: 'keyairra123',
     adminStatus: true
-  },
-  {
-    firstName: 'Stacy',
-    lastName: 'Harfenist',
-    email: 'stacy@email.com',
-    password: 'whatineedapassword?',
-    adminStatus: false
   }
 ]
 const products = [
   {
     title: 'Cook a Duck',
     price: 45.5,
-    imgUrl: 'cook-a-duck.jpg',
+    imgUrl: 'https://i.ibb.co/sq0Zv68/cook-a-duck.jpg',
     description:
       'Learn how to cook a duck in the french style.  Impress your friends and neighbors.  Even the neighbors who are not your friends.',
     quantity: 6
@@ -163,7 +142,7 @@ const products = [
   {
     title: 'Recognition of Stupidity',
     price: 19.95,
-    imgUrl: 'recognition-of-stupidity.jpg',
+    imgUrl: 'https://ibb.co/cwy21M5',
     description:
       'Computers are dumb, and ruthless. Their strength is their processing power, not independent or creative thought. Learn all about that with this discounted item!',
     quantity: 10
@@ -263,55 +242,6 @@ const addresses = [
     state: 'OK',
     zipCode: 12345,
     userId: 1
-  },
-  {
-    street: '345 Nancy Ave',
-    city: 'Drewston',
-    state: 'OH',
-    zipCode: 44567,
-    userId: 2
-  },
-  {
-    street: '54 Old Clock Way',
-    city: 'Carson',
-    state: 'NV',
-    zipCode: 56123,
-    userId: 3
-  },
-  {
-    street: '4 Nickerson Way',
-    city: 'Emerson',
-    state: 'MA',
-    zipCode: 12345,
-    userId: 4
-  },
-  // {
-  //   street: '34 Fayne Way',
-  //   city: 'Atlanta',
-  //   state: 'GA',
-  //   zipCode: 11245,
-  //   userId: 4
-  // },
-  // {
-  //   street: '33 Bess Street',
-  //   city: 'Marvinsville',
-  //   state: 'TX',
-  //   zipCode: 55342,
-  //   userId: 3
-  // },
-
-  {
-    street: '45 Hannah Ave',
-    city: 'Gruen',
-    state: 'IL',
-    zipCode: 21376
-  },
-
-  {
-    street: '1 Circle Drive',
-    city: 'River Heights',
-    state: 'IL',
-    zipCode: 31201
   }
 ]
 const reviews = [
@@ -327,7 +257,7 @@ const reviews = [
     title: 'eh',
     text: 'this was a nice skill, but it did not save my marriage',
     stars: 3,
-    userId: 2,
+    userId: 1,
     productId: 2
   },
   {
@@ -335,18 +265,18 @@ const reviews = [
     text:
       'I thought I was ordering a meal for delivery, but instead now I know how to cook it?? Very weird, but cool',
     stars: 5,
-    userId: 2,
+    userId: 1,
     productId: 3
   },
   {
     title: 'Tres Bien!',
     text: 'I love this product! I feel so french!',
     stars: 5,
-    userId: 3,
+    userId: 1,
     productId: 1
   }
 ]
-const categories = [{title: 'Cooking'}, {title: 'Coding'}, {title: 'Music'}]
+const categories = [{title: 'Cooking'}, {title: 'Coding'}, {title: 'Inspiration'}]
 
 let createdProducts
 let createdCategories
@@ -400,16 +330,11 @@ function seed() {
       newTwentyFive, newTwentySix, newTwentySeven
     })
     .catch(error => console.error(error))
-  // .then(() => {
-  // console.log('db synced!')
 }
 
-// We've separated the `seed` function from the `runSeed` function.
-// This way we can isolate the error handling and exit trapping.
-// The `seed` function is concerned only with modifying the database.
 async function runSeed() {
   console.log('seeding...')
-  await db.sync({force: true}) // tables didn't drop (ie. when npm run seed occured, Carts model still existed and Order model was not updated)
+  await db.sync({force: true})
   try {
     await seed()
   } catch (err) {

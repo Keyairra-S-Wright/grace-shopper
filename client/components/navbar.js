@@ -202,7 +202,7 @@ class Navbar extends React.Component {
             </AppBar>
           </div>
           <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-          <a href="/home"><img src="images/logo_banner.png" height="300px" width="100%" padding-top="0px"/></a>
+          <a href="/home"><img src="https://i.ibb.co/4p4SMcC/logo-banner.png" width="100%" top-padding = "0px"/></a>
         </Animated>
       </div>
     )

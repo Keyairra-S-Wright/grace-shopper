@@ -74,7 +74,7 @@ class SingleProduct extends Component {
             <CardMedia
               component="img"
               className={classes.media}
-              image={`/${product.imgUrl}`}
+              image={product.imgUrl}
               title={`/${product.titlel}`}
             />
             <CardContent>
