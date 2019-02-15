@@ -75,7 +75,7 @@ class Cart extends Component {
                 console.log('Product', product)
                 return (
                   <ListItem key={product.id}>
-                    <Avatar>{product.imgUrl}</Avatar>
+                    <Avatar img src ={product.imgUrl}/>
                     <ListItemText
                       primary={product.title}
                       secondary={product.price.toFixed(2)}
