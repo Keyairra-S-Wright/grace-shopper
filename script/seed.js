@@ -31,7 +31,7 @@ const products = [
   {
     title: 'Addictive Seaseme Chicken',
     price: 35.0,
-    imgUrl: 'addictive-seaseme.jpg',
+    imgUrl: 'https://i.ibb.co/qnmmJSK/addictive-seaseme.jpg',
     description:
       "This chicken is incredible. It is so tender, that you're partner will eat double the amount and break his gym diet goals!",
     quantity: 10
@@ -39,7 +39,7 @@ const products = [
   {
     title: 'General Tao Chicken',
     price: 45.0,
-    imgUrl: 'general-tao.jpg',
+    imgUrl: 'https://i.ibb.co/6NByHzt/general-tao.jpg',
     description:
       "You may not be in the military, but this recipe's general's oyster sauce will command your dinner plate for the night!",
     quantity: 10
@@ -47,7 +47,7 @@ const products = [
   {
     title: 'Pan-Fried Chinese Pancakes',
     price: 30.0,
-    imgUrl: 'pan-fried-pancakes.jpg',
+    imgUrl: 'https://i.ibb.co/2YhCShT/pan-fried-pancakes.jpg',
     description:
       "A savory dough is sprinkled with green onions and seasame oil. Even Grace Hopper instructors can't resist this recipe!",
     quantity: 10
@@ -55,7 +55,7 @@ const products = [
   {
     title: 'Slow Cooker Chicken Mole',
     price: 35.0,
-    imgUrl: 'slow-cooker-chicken-mole.jpg',
+    imgUrl: 'https://i.ibb.co/8KXk3hf/slow-cooker-chicken-mole.jpg',
     description:
       "Shred the chicken so it will soak up all the yummy mole! Your friends will think you're a better chef with this recipe!",
     quantity: 10
@@ -63,7 +63,7 @@ const products = [
   {
     title: 'Chicken Tortilla Soup',
     price: 40.0,
-    imgUrl: 'chicken-tortilla-soup.jpg',
+    imgUrl: 'https://i.ibb.co/8KXk3hf/slow-cooker-chicken-mole.jpg',
     description:
       'This soups is quick to make, flavorful, and filling - a great meal for computer programmers on the go!',
     quantity: 10
@@ -71,7 +71,7 @@ const products = [
   {
     title: 'Enchiladas Suizas',
     price: 32.75,
-    imgUrl: 'enchiladas-suizas.jpg',
+    imgUrl: 'https://i.ibb.co/2jnpMVT/enchiladas-suizas.jpg',
     description:
       "Following this recipe will be great for data night! Just don't spill any of the cheese on your pants. No one likes cheese pants.",
     quantity: 10
@@ -79,7 +79,7 @@ const products = [
   {
     title: 'Southern Shrimp and Grits',
     price: 37.95,
-    imgUrl: 'southern-shrimp-grits.jpg',
+    imgUrl: 'https://i.ibb.co/ZxgYXHJ/southern-shrimp-grits.jpg',
     description:
       'A southern specialty, sometimes called breakfast shrimp. This dish tastes better than passing the senior checkpoint!',
     quantity: 10
@@ -87,7 +87,7 @@ const products = [
   {
     title: 'Chicken Okra Gumbo',
     price: 42.55,
-    imgUrl: 'chicken-okra-gumbo.jpg',
+    imgUrl: 'https://i.ibb.co/JpbnS8N/chicken-okra-gumbo.jpg" ',
     description:
       "This recipe's creator used to live in New Orleans. But your taste buds won't ever know about the move. Get this recipe today!",
     quantity: 10
@@ -95,7 +95,7 @@ const products = [
   {
     title: 'Jalapeno Buttermilk Cornbread',
     price: 25.99,
-    imgUrl: 'jalapeno-buttermilk-cornbread.jpg',
+    imgUrl: 'https://i.ibb.co/2gW5TxY/jalapeno-buttermilk-cornbread.jpg',
     description:
       "If you are from the South, then you probably have a good cornbread recipe. For everyone else, we've got you covered!",
     quantity: 10
@@ -103,14 +103,14 @@ const products = [
   {
     title: 'React Expertise',
     price: 500,
-    imgUrl: 'react-expertise.png',
+    imgUrl: 'https://i.ibb.co/8YWDqnc/react-expertise.png',
     description: 'Instantly become an expert at React.  Redux costs extra',
     quantity: 1
   },
   {
     title: 'Language',
     price: 25.0,
-    imgUrl: 'languages.png',
+    imgUrl: 'https://i.ibb.co/8mG1G0Y/languages.png',
     description:
       'It may seem obvious, but in order to write code, you’ll have to learn at least one programming or scripting language. ',
     quantity: 10
@@ -118,7 +118,7 @@ const products = [
   {
     title: 'Self-Reliance',
     price: 25.0,
-    imgUrl: 'self-reliance.png',
+    imgUrl: 'https://i.ibb.co/M2LNrgJ/self-reliance.png',
     description:
       'This one is huge. When you start out coding, it can feel completely overwhelming. Should you focus on front end or back end? What programming languages should you use? Get a dose of self-reliance, and you will be able to answer these questions.',
     quantity: 10
@@ -126,7 +126,7 @@ const products = [
   {
     title: 'Logic',
     price: 55.0,
-    imgUrl: 'logic.jpg',
+    imgUrl: 'https://i.ibb.co/27TTyVd/logic.jpg',
     description:
       'Love proofs? Live to assess the facts at hand and come to useful conclusions for problem solving? You may have a skeleton in one of the most important skills for coders.',
     quantity: 10
@@ -134,7 +134,7 @@ const products = [
   {
     title: 'Attention to Detail',
     price: 20.05,
-    imgUrl: 'attention-to-detail.png',
+    imgUrl: 'https://i.ibb.co/M6ksvwN/attention-to-detail.png',
     description:
       "Get up off that thang. Dance 'til you feel better! Did you notice that this was a song lyric? If not, get some attention to detail in order to improve your coding skills today! We believe in you.",
     quantity: 10
@@ -142,7 +142,7 @@ const products = [
   {
     title: 'Recognition of Stupidity',
     price: 19.95,
-    imgUrl: 'https://ibb.co/cwy21M5',
+    imgUrl: 'https://i.ibb.co/HCKGV1v/recognition-of-stupidity.jpg',
     description:
       'Computers are dumb, and ruthless. Their strength is their processing power, not independent or creative thought. Learn all about that with this discounted item!',
     quantity: 10
@@ -150,7 +150,7 @@ const products = [
   {
     title: 'Abstract Thinking',
     price: 35.75,
-    imgUrl: 'abstract-thinking.jpg',
+    imgUrl: 'https://i.ibb.co/6b49dHB/abstract-thinking.jpg',
     description:
       'Abstract thinking is thinking done without the object of the thought present, or even physical. It’s a foundation of coding.',
     quantity: 10
@@ -158,14 +158,14 @@ const products = [
   {
     title: 'Patience',
     price: 45.0,
-    imgUrl: 'patience.jpg',
+    imgUrl: 'https://i.ibb.co/84rr5JP/patience.jpg',
     description: 'Patience. You need it. Trust us.',
     quantity: 10
   },
   {
     title: 'Memory',
     price: 40.0,
-    imgUrl: 'memory.jpg',
+    imgUrl: 'https://i.ibb.co/sRwr6bB/memory.jpg',
     description:
       'There are some many docs! Where will you look for your coding challenges? Put as much as you can into your own memory, and you will code along for miles!',
     quantity: 10
@@ -173,7 +173,7 @@ const products = [
   {
     title: 'Communication',
     price: 55.0,
-    imgUrl: 'communication.jpg',
+    imgUrl: 'https://i.ibb.co/Bg0n2nr/communication.jpg',
     description:
       'Programmers need to be able to communicate well. Just try making a group project like grace-shopper without it!',
     quantity: 10
@@ -181,7 +181,7 @@ const products = [
   {
     title: 'Intermediate Piano',
     price: 75.0,
-    imgUrl: 'intermediate-piano.jpg',
+    imgUrl: 'https://i.ibb.co/7tB2J3j/intermediate-piano.jpg',
     description:
       'Tired of playing Heart & Soul? Up your piano skills to include Fur Elise, Elvin Dance, and the Spinning Song',
     quantity: 12
@@ -189,7 +189,7 @@ const products = [
   {
     title: 'Beginner Piano',
     price: 100.0,
-    imgUrl: 'beginner-piano.jpg',
+    imgUrl: 'https://i.ibb.co/9V7F9xb/beginner-piano.jpg',
     description:
       'If you do not know how to play the piano, no worries. Spend money on this item and be a pro of Mary Had a Little Lamb in no time!',
     quantity: 10
@@ -197,7 +197,7 @@ const products = [
   {
     title: 'Guitar Lessons',
     price: 95.0,
-    imgUrl: 'guitar-lessons.jpg',
+    imgUrl: 'https://i.ibb.co/1LvpV7K/guitar-lessons.jpg',
     description:
       'Jimi Hendrick said "Music doesn\'t lie. If there is something that needs to be changed in this world, then it can only happen through music."',
     quantity: 10
@@ -205,7 +205,7 @@ const products = [
   {
     title: 'Saxophone Jazzy Times',
     price: 85.99,
-    imgUrl: 'saxophone-lessons.jpg',
+    imgUrl: 'https://i.ibb.co/1GT5FQ2/saxophone-lessons.jpg',
     description:
       'The potential for the saxophone is unlimited. If you like an instrument that sings, play the saxophone.',
     quantity: 10
@@ -213,7 +213,7 @@ const products = [
   {
     title: 'Toot Toot Flute Lessons',
     price: 75.0,
-    imgUrl: 'flute-lesson.jpg',
+    imgUrl: 'https://i.ibb.co/b59fyZ9/flute-lesson.jpg',
     description:
       "The flute of the infinite is played without ceasing, and it's sound is love. ",
     quantity: 10
@@ -221,7 +221,7 @@ const products = [
   {
     title: 'Singing Lessons',
     price: 200.99,
-    imgUrl: 'singing-lesson.jpg',
+    imgUrl: 'https://i.ibb.co/gvw0mbv/singing-lesson.jpg',
     description:
       'The late Aretha Franklin beleived that politics were not her arena. Music was. Be like Aretha and learn to sing with this fine item!',
     quantity: 10
@@ -229,7 +229,7 @@ const products = [
   {
     title: 'Violin Lessons',
     price: 50.95,
-    imgUrl: 'violin-lesson.jpg',
+    imgUrl: 'https://i.ibb.co/nR03yJZ/violin-lesson.jpg',
     description:
       'The soul is like a violin string: it makes music only when it is stretched.',
     quantity: 10
