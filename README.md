@@ -7,8 +7,9 @@ To run this program
 - npm install
 - npm run start-dev
 - view in localhost: 8080
+- create an account or login using username: kwright@email.com password:keyairra123
 
-This is a prototype of an e-commerce platform that will allow clients to create, manage and run an e-commerce site. Technologies used include Node.js, Sequelize, Express, React-Redux, and Material UI.
+This is a prototype of an e-commerce platform that will allow admins to create, manage and run an e-commerce site. Technologies used include Node.js, Sequelize, Express, React-Redux, and Material UI.
 
 Developers on this project include:
     - Almendra Estrada

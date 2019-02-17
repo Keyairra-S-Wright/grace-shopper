@@ -24,8 +24,6 @@ class UpdateProfile extends React.Component {
       id: props.user.id,
       firstName: '' || props.user.firstName,
       lastName: '' || props.user.lastName,
-      //email: '' || props.user.email,
-      //password: '' || props.user.password,
       street: '' || props.address.street,
       city: '' || props.address.city,
       state: '' || props.address.state,
@@ -49,8 +47,6 @@ class UpdateProfile extends React.Component {
       id,
       firstName,
       lastName,
-      //email,
-      //password,
       street,
       city,
       state,
@@ -122,24 +118,6 @@ class UpdateProfile extends React.Component {
             onChange={this.handleChange}
           />
         </FormControl>
-
-        {/* <FormControl className="name">
-          <InputLabel htmlFor="title">Email</InputLabel>
-          <Input
-            id="email"
-            name="email"
-            value={this.state.email}
-            onChange={this.handleChange}
-          />
-        </FormControl>
-        <FormControl className="name">
-          <InputLabel htmlFor="title">Password</InputLabel>
-          <Input
-            name="password"
-            value={this.state.password}
-            onChange={this.handleChange}
-          />
-        </FormControl> */}
         <button type="submit">Submit</button>
       </form>
     )

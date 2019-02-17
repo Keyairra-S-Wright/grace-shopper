@@ -17,7 +17,7 @@ export const styles = theme => ({
   },
   gridList: {
     width: 'auto',
-    height: 'auto',//keyairra made a change. this was originally --> height: 450
+    height: 'auto'
   },
 })
 
@@ -26,7 +26,7 @@ const DisplayManyProducts = props => {
   return (
     <div className={classes.root}>
       <GridList cellHeight={180} className={classes.gridList}>
-        <GridListTile key="Subheader" cols={2} style={{height: 'auto'}}>
+        <GridListTile key="Subheader" cols={2} style={{height: 'auto'}} border ='5px solid black'>
           <ListSubheader component="div">{title}</ListSubheader>
         </GridListTile>
         {products.map(product => (

@@ -39,11 +39,11 @@ class UserProfile extends React.Component {
             <Avatar>{letter}</Avatar>
             <CardContent>
               <Typography gutterBottom variant="headline" component="h2">
-                {user.firstName + ' ' + user.lastName}
+                {`${user.firstName} ${user.lastName}`}
               </Typography>
               <Typography component="p">{user.email}</Typography>
               <Typography component="p">
-                {address.street + ' ' + address.city + ', ' + address.state}
+                {`${address.street} ${address.city}  ${address.state}`}
               </Typography>
             </CardContent>
           </CardActionArea>

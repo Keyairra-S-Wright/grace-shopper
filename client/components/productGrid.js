@@ -6,9 +6,8 @@ import GridListTile from '@material-ui/core/GridListTile'
 import GridListTileBar from '@material-ui/core/GridListTileBar'
 import IconButton from '@material-ui/core/IconButton'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
-//import {addItemToCart, addToCartNLI, setCartState} from '../store'
 
-const handleClick = async (product, orderId, cartItems, addItemToCart, addToCartNLI, setCartState) => {
+const handleClick = (product, orderId, addItemToCart) => {
   const reqBodyObj = {
     orderId: orderId,
     productId: Number(product.id)
@@ -27,7 +26,7 @@ const ProductGrid = props => {
   return (
     <div className={styles.gridList}>
       <GridListTile key={product.title}>
-        <img src={product.imgUrl} alt={product.title} style={{height: '200px', width: '200px'}}/>
+        <img src={product.imgUrl} alt={product.title} style={{height: '200px', width: '200px', border: '8px solid white'}} />
         <GridListTileBar
           title={<Link to={`/product/${product.id}`}>{product.title}</Link>}
           subtitle={<span>{product.description}</span>}
