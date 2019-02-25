@@ -1,7 +1,5 @@
 Grace Shopper
 
-Find the deployed app on heroku using: www.graceshopperjaks.herokuapp.com/
-
 To run this program
 - clone
 - npm install
